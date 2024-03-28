@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+	<head>
+		
+		<title>{% block title %}{% endblock %}</title>
+
+		<link rel="icon" type="image/x-icon" href="/static/img/icons8-d-100.png">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<script src="https://use.fontawesome.com/fe459689b4.js"></script>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="static/css/style.css" />
+
+		{% block head %}{% endblock %}
+
+	</head>
+
+	<body class="background-base p-1">
+		<div class="background-blue border-container p-2">
+			<div class="d-flex header">
+				{% for msg in get_flashed_messages() %}
+						<div class="alert alert-info">{{ msg }}</div>
+				{% endfor %}
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<nav class="navbar navbar-expand-md navbar-dark background-purple custom-nav">
+						<div class="navbar-brand">
+							Goose's Mounts and More
+						</div>
+						<button class="navbar-toggler rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#nav-content" aria-controls="navbar-conent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="dropdown-toggle">Tabs</span>
+						</button>
+						<div class="collapse navbar-collapse" id="nav-content">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item">
+									<a class="nav-link" href="/">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/">TAB1</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/">TAB2</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/">TAB3</a>
+								</li>
+							</ul>
+						</div>
+
+						<button class="btn btn-outline-light rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#modal-login" aria-expanded="false" aria-controls="modal-login">
+							Login
+            </button>
+
+					</nav>
+				</div>
+			</div>
+
+			<div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login-label" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header background-purple">
+							<h5 class="modal-title" id="modal-login-label">Log In to Goose's Mounts and More!</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<div class="card" id="login">
+								<div class="card-body">
+									<h5 class="card-title">Login Info</h5>
+										<div class="card-text">
+                      EVENTUAL LOGIN
+										</div>
+								</div>            
+							</div>
+						</div>
+						<div class="modal-footer">
+              SITE FOOTER
+            </div>
+					</div>
+				</div>
+			</div>
+
+			{% block content %}{% endblock %}
+			<footer>
+				<br>
+				<div>Project Developed By: <a href="https://www.linkedin.com/in/cguzman07/" target="_blank">Christopher Guzman (LinkedIn)</a></div>
+			</footer>
+		</div>
+
+	</body>
+</html>
