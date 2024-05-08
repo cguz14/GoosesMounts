@@ -28,7 +28,9 @@
 				<div class="col">
 					<nav class="navbar navbar-expand-md navbar-dark background-purple custom-nav">
 						<div class="navbar-brand">
-							Goose's Mounts and More
+							<button class="rounded-pill" type="button" onclick="location.href='/'">
+								Goose's Mounts and More
+							</button>
 						</div>
 						<button class="navbar-toggler rounded-pill" type="button" data-bs-toggle="collapse" data-bs-target="#nav-content" aria-controls="navbar-conent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="dropdown-toggle">Tabs</span>
@@ -36,13 +38,31 @@
 						<div class="collapse navbar-collapse" id="nav-content">
 							<ul class="navbar-nav mr-auto">
 								<li class="nav-item">
-									<a class="nav-link" href="/">Home</a>
+									<a class="nav-link" href="/mounts">Mounts</a>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="/">TAB1</a>
+									<a class="nav-link" href="/accessories">Accessories</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="/">TAB2</a>
+								<li class="nav-item dropdown">
+									<a class="nav-link dropdown-toggle" style="color:black" id="navbarDropdownBrands" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+										Search By TV Brand
+									</a>
+										<ul class="dropdown-menu" aria-labelledby="navbarDropdownBrands">
+											<li>	
+												<a class="dropdown-item">
+													<div class="btn-group dropright">
+														<button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownSony" style="color:black" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															Sony
+														</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownSony">
+															<div class="dropdown-item" type="button" style="color:black" href="/Sony-32R400A">
+																Sony 32R400A Mounts
+															</div>
+														</div>
+													</div>
+												</a>
+											</li>
+										</ul>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="/">TAB3</a>

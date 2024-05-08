@@ -73,6 +73,10 @@
 	display: inline-block;
 }
 
+.drop {
+	color: black;
+}
+
 .dropbtn {
 	background-color: #3498DB;
 	color: white;
